@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-import { BelgilanishlarService } from '@/service/belgilanishlarService';
+import { BelgilanishlarService } from '../service/belgilanishlarService';
 
-export const useBelgilanishlarStore = defineStore('talimShakli', () => {
+export const useBelgilanishlarStore = defineStore('belgilanishlar', () => {
   // State
   const belgilanishlar = ref([]);
   const belgilanish = ref({});

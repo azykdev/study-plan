@@ -23,7 +23,7 @@
               {{ slotProps.index + 1 }}
             </template>
           </Column>
-          <Column field="grafik_belgisi" header="Belgilanishi" style="width: 100%;"></Column>
+          <Column field="grafik_belgisi" header="Belgilanishi"></Column>
           <Column field="mazmuni" header="Mazmuni" style="width: 100%;"></Column>
           <Column headerStyle="min-width:8rem;">
             <template #body="slotProps">
@@ -42,6 +42,11 @@
             <InputText id="grafik_belgisi" v-model.trim="formData.grafik_belgisi" required="true" autofocus
               :invalid="submitted && !formData.grafik_belgisi" />
             <small class="p-invalid" v-if="submitted && !formData.grafik_belgisi">Belgilanish kiritish majburiy.</small>
+          </div>
+
+          <div class="field">
+            <label for="mazmuni">Mazmuni</label>
+            <Textarea id="mazmuni" v-model="formData.mazmuni" required="true" rows="3" cols="20" />
           </div>
 
           <template #footer>
@@ -82,9 +87,9 @@ const dt = ref(null);
 const submitted = ref(false);
 
 // OnMounted
-// onMounted(() => {
-//   belgilanishlarStore.getAllBelgilanishlar()
-// });
+onMounted(() => {
+  belgilanishlarStore.getAllBelgilanishlar()
+});
 
 const openDialog = () => {
   formData.value = {};
@@ -149,4 +154,3 @@ const deleting = () => {
   formData.value = {};
 };
 </script>
-
