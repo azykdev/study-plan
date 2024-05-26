@@ -2,33 +2,53 @@
   "oquv-yillari": [
     {
       "id": "1",
-      "oquv_yili": "2022-2023",
+      "uquv_yili": "2022-2023",
       "createdAt": "2021-10-15T06:52:24.000Z",
       "updatedAt": "2021-10-15T06:52:24.000Z"
     },
     {
       "id": "2",
-      "oquv_yili": "2021-2022",
+      "uquv_yili": "2021-2022",
       "createdAt": "2021-10-15T06:52:24.000Z",
       "updatedAt": "2021-10-15T06:52:24.000Z"
     },
     {
       "id": "3",
-      "oquv_yili": "2020-2021",
+      "uquv_yili": "2020-2021",
       "createdAt": "2021-10-15T06:52:24.000Z",
       "updatedAt": "2021-10-15T06:52:24.000Z"
     },
     {
       "id": "e346",
-      "oquv_yili": "2222444"
+      "uquv_yili": "2222444"
     },
     {
       "id": "d3da",
-      "oquv_yili": "2111"
+      "uquv_yili": "2111"
     },
     {
       "id": "e346",
-      "oquv_yili": "22223"
+      "uquv_yili": "22223"
+    }
+  ],
+  "yonalishlar": [
+    {
+      "id": "1",
+      "yunalish": "IT",
+      "createdAt": "2021-10-15T06:52:24.000Z",
+      "updatedAt": "2021-10-15T06:52:24.000Z"
+    },
+    {
+      "id": "2",
+      "yunalish": "IT",
+      "createdAt": "2021-10-15T06:52:24.000Z",
+      "updatedAt": "2021-10-15T06:52:24.000Z"
+    },
+    {
+      "id": "3",
+      "yunalish": "ITa",
+      "createdAt": "2021-10-15T06:52:24.000Z",
+      "updatedAt": "2021-10-15T06:52:24.000Z"
     }
   ]
 }

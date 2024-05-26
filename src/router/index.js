@@ -40,9 +40,9 @@ const router = createRouter({
                     component: () => import('@/views/oquv-bolimi/OquvYili.vue')
                 },
                 {
-                    path: '/oquv-bolimi/yonalish',
-                    name: 'oquv_bolimi_yonalish',
-                    component: () => import('@/views/oquv-bolimi/Yonalish.vue')
+                    path: '/oquv-bolimi/yonalishlar',
+                    name: 'oquv_bolimi_yonalishlar',
+                    component: () => import('@/views/oquv-bolimi/Yonalishlar.vue')
                 },
                 {
                     path: '/oquv-bolimi/talim-shakli',

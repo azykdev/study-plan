@@ -10,7 +10,7 @@ const oquvBolimiModel = ref([
     items: [
       { label: 'Dashboard', icon: 'mdi mdi-view-dashboard', to: 'oquv_bolimi_dashboard' },
       { label: "O'quv yili", icon: 'mdi mdi-calendar-month', to: 'oquv_bolimi_oquv_yili' },
-      { label: "Yo'nalish", icon: 'mdi mdi-directions-fork', to: 'oquv_bolimi_yonalish' },
+      { label: "Yo'nalish", icon: 'mdi mdi-directions-fork', to: 'oquv_bolimi_yonalishlar' },
       { label: "Ta'lim shakli", icon: 'mdi mdi-sitemap-outline', to: 'oquv_bolimi_talim_shakli' },
       { label: "Akademik daraja", icon: 'mdi mdi-school', to: 'oquv_bolimi_akademik_daraja' },
       { label: "O'quv rejalar", icon: 'mdi mdi-calendar-search', to: 'oquv_bolimi_oquv_rejalar' },
@@ -68,7 +68,7 @@ const kafedraMudiriModel = ref([
     items: [
       { label: 'Dashboard', icon: 'mdi mdi-view-dashboard', to: 'oquv_bolimi_dashboard' },
       // { label: "O'quv yili", icon: 'mdi mdi-calendar-month', to: 'oquv_bolimi_oquv_yili' },
-      // { label: "Yo'nalish", icon: 'mdi mdi-directions-fork', to: 'oquv_bolimi_yonalish' },
+      // { label: "Yo'nalish", icon: 'mdi mdi-directions-fork', to: 'oquv_bolimi_yonalishlar' },
       // { label: "Ta'lim shakli", icon: 'mdi mdi-sitemap-outline', to: 'oquv_bolimi_talim_shakli' },
       // { label: "Akademik daraja", icon: 'mdi mdi-school', to: 'oquv_bolimi_akademik_daraja' },
       { label: "O'quv grafigi belgilanishlari", icon: 'mdi mdi-symbol', to: 'oquv_bolimi_belgilanishlar' },
