@@ -6,7 +6,7 @@ let role = ref('oquv_bolimi');
 
 const oquvBolimiModel = ref([
   {
-    label: 'Home',
+    label: 'O\'quv bolimi',
     items: [
       { label: 'Dashboard', icon: 'mdi mdi-view-dashboard', to: 'oquv_bolimi_dashboard' },
       { label: "O'quv yili", icon: 'mdi mdi-calendar-month', to: 'oquv_bolimi_oquv_yili' },
@@ -64,7 +64,7 @@ const oquvBolimiModel = ref([
 
 const kafedraMudiriModel = ref([
   {
-    label: 'Home',
+    label: 'Kafedra mudiri',
     items: [
       { label: 'Dashboard', icon: 'mdi mdi-view-dashboard', to: 'oquv_bolimi_dashboard' },
       // { label: "O'quv yili", icon: 'mdi mdi-calendar-month', to: 'oquv_bolimi_oquv_yili' },
