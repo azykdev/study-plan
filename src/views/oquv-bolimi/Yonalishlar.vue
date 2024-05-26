@@ -126,13 +126,13 @@ const save = () => {
   }
 };
 
-const edit = (oquvYili) => {
-  formData.value = { ...oquvYili };
+const edit = (item) => {
+  formData.value = { ...item };
   dialog.value = true;
 };
 
-const deleteConfirm = (oquvYili) => {
-  formData.value = oquvYili;
+const deleteConfirm = (item) => {
+  formData.value = item;
   deleteDialog.value = true;
 };
 

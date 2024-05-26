@@ -50,5 +50,29 @@
       "createdAt": "2021-10-15T06:52:24.000Z",
       "updatedAt": "2021-10-15T06:52:24.000Z"
     }
+  ],
+  "talim-shakli": [
+    {
+      "id": "1",
+      "talim_shakli": "Kunduzgi",
+      "createdAt": "2021-10-15T06:52:24.000Z",
+      "updatedAt": "2021-10-15T06:52:24.000Z"
+    },
+    {
+      "id": "4b70",
+      "talim_shakli": "Sirtqi"
+    },
+    {
+      "id": "7a6e",
+      "talim_shakli": "Kechki"
+    }
+  ],
+  "akademik-daraja": [
+    {
+      "id": "1",
+      "akademik_daraja": "Bakalavr",
+      "createdAt": "2021-10-15T06:52:24.000Z",
+      "updatedAt": "2021-10-15T06:52:24.000Z"
+    }
   ]
 }
