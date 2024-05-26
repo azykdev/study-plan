@@ -1,6 +1,6 @@
 import axios from "./axios";
 
-export const oquvYiliService = {
+export const OquvYiliService = {
   getAll() {
     return axios.get("/oquv-yillari");
   },

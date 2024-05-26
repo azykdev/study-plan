@@ -1,6 +1,6 @@
 import axios from "./axios";
 
-export const talimShakliService = {
+export const TalimShakliService = {
   getAll() {
     return axios.get("/talim-shakli");
   },

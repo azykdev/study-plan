@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-import { talimShakliService } from '../service/talimShakliService';
+import { TalimShakliService } from '../service/talimShakliService';
 
 export const useTalimShakliStore = defineStore('talimShakli', () => {
   // State
@@ -12,24 +12,24 @@ export const useTalimShakliStore = defineStore('talimShakli', () => {
 
   const getAllTalimShakllari = async () => {
     loading.value = true;
-    talimShakllari.value = (await talimShakliService.getAll()).data;
+    talimShakllari.value = (await TalimShakliService.getAll()).data;
     loading.value = false;
   };
 
   const getTalimShakli = async (id) => {
-    return (talimShakli.value = await talimShakliService.get(id));
+    return (talimShakli.value = await TalimShakliService.get(id));
   };
 
   const createTalimShakli = async (data) => {
-    return await talimShakliService.create(data);
+    return await TalimShakliService.create(data);
   };
 
   const updateTalimShakli = async (data) => {
-    return await talimShakliService.update(data.id, data);
+    return await TalimShakliService.update(data.id, data);
   };
 
   const deleteTalimShakli = async (id) => {
-    return await talimShakliService.delete(id);
+    return await TalimShakliService.delete(id);
   };
 
   return { talimShakllari, talimShakli, loading, getAllTalimShakllari, getTalimShakli, createTalimShakli, updateTalimShakli, deleteTalimShakli };

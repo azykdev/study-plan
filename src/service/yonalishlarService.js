@@ -1,6 +1,6 @@
 import axios from "./axios";
 
-export const yonalishlarService = {
+export const YonalishlarService = {
   getAll() {
     return axios.get("/yonalishlar");
   },

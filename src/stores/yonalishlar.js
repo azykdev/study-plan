@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-import { yonalishlarService } from '../service/yonalishlarService';
+import { YonalishlarService } from '../service/yonalishlarService';
 
 export const useYonalishlarStore = defineStore('yonalishlar', () => {
   // State
@@ -21,24 +21,24 @@ export const useYonalishlarStore = defineStore('yonalishlar', () => {
 
   const getAllYonalishlar = async () => {
     loading.value = true;
-    yonalishlar.value = (await yonalishlarService.getAll()).data;
+    yonalishlar.value = (await YonalishlarService.getAll()).data;
     loading.value = false;
   };
 
   const getYonalish = async (id) => {
-    return (yonalish.value = await yonalishlarService.get(id));
+    return (yonalish.value = await YonalishlarService.get(id));
   };
 
   const createYonalish = async (data) => {
-    return await yonalishlarService.create(data);
+    return await YonalishlarService.create(data);
   };
 
   const updateYonalish = async (data) => {
-    return await yonalishlarService.update(data.id, data);
+    return await YonalishlarService.update(data.id, data);
   };
 
   const deleteYonalish = async (id) => {
-    return await yonalishlarService.delete(id);
+    return await YonalishlarService.delete(id);
   };
 
   return { yonalishlar, yonalish, loading, getAllYonalishlar, getYonalish, createYonalish, updateYonalish, deleteYonalish };
