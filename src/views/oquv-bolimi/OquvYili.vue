@@ -24,8 +24,10 @@
           <Column field="oquv_yili" header="O'quv yili" style="width: 100%;"></Column>
           <Column headerStyle="min-width:8rem;">
             <template #body="slotProps">
-              <Button icon="pi pi-pencil" class="mr-2" severity="success" rounded @click="" />
-              <Button icon="pi pi-trash" class="mt-2" severity="danger" rounded @click="confirmDelete(slotProps.data)" />
+              <Button icon="pi pi-pencil" class="mr-2" severity="success" rounded
+                @click="editOquvYili(slotProps.data)" />
+              <Button icon="pi pi-trash" class="mt-2" severity="danger" rounded
+                @click="deleteConfirm(slotProps.data)" />
             </template>
           </Column>
         </DataTable>
@@ -99,25 +101,39 @@ const hideDialog = () => {
 const save = () => {
   submitted.value = true;
 
-  if (formData.value.oquv_yili) {
-    oquvYili.createOquvYili(formData.value).then(res => {
-      if (res.status === 201) {
-        toast.add({ severity: 'success', summary: 'O\'quv yili', detail: 'O\'quv yili muvaffaqiyatli qo\'shildi', life: 3000 });
-        oquvYili.getAllOquvYillari();
-      } else {
-        toast.add({ severity: 'error', summary: 'O\'quv yili', detail: 'O\'quv yili qo\'shishda xatolik', life: 3000 });
-      }
-    })
-    hideDialog();
+  if (formData.value.oquv_yili && formData.value.oquv_yili.trim()) {
+    if (formData.value.id) {
+      oquvYili.updateOquvYili(formData.value).then(res => {
+        console.log(res);
+        if (res.status === 200) {
+          toast.add({ severity: 'success', summary: 'O\'quv yili', detail: 'O\'quv yili muvaffaqiyatli o\'zgartirildi', life: 3000 });
+          oquvYili.getAllOquvYillari();
+        } else {
+          toast.add({ severity: 'error', summary: 'O\'quv yili', detail: 'O\'quv yili o\'zgartirishda xatolik', life: 3000 });
+        }
+      })
+    } else {
+      oquvYili.createOquvYili(formData.value).then(res => {
+        if (res.status === 201) {
+          toast.add({ severity: 'success', summary: 'O\'quv yili', detail: 'O\'quv yili muvaffaqiyatli qo\'shildi', life: 3000 });
+          oquvYili.getAllOquvYillari();
+        } else {
+          toast.add({ severity: 'error', summary: 'O\'quv yili', detail: 'O\'quv yili qo\'shishda xatolik', life: 3000 });
+        }
+      })
+    }
+
+    dialog.value = false;
+    formData.value = {};
   }
 };
 
-// const editOquvYili = (oquvYili) => {
-//   formData.value = { ...oquvYili };
-//   dialog.value = true;
-// };
+const editOquvYili = (oquvYili) => {
+  formData.value = { ...oquvYili };
+  dialog.value = true;
+};
 
-const confirmDelete = (oquvYili) => {
+const deleteConfirm = (oquvYili) => {
   formData.value = oquvYili;
   deleteDialog.value = true;
 };

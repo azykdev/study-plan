@@ -23,17 +23,23 @@ export const useOquvYiliStore = defineStore('oquvYili', () => {
     loading.value = true;
     oquvYillari.value = (await oquvYiliService.getAll()).data;
     loading.value = false;
-  }
+  };
 
-  const getOquvYili = async (id) => oquvYili.value = await oquvYiliService.get(id);
+  const getOquvYili = async (id) => {
+    return (oquvYili.value = await oquvYiliService.get(id));
+  };
 
   const createOquvYili = async (data) => {
-    return await oquvYiliService.create(data)
-  }
-  
-  const updateOquvYili = async (id, data) => await oquvYiliService.update(id, data);
+    return await oquvYiliService.create(data);
+  };
 
-  const deleteOquvYili = async (id) => await oquvYiliService.delete(id);
+  const updateOquvYili = async (data) => {
+    return await oquvYiliService.update(data.id, data);
+  };
+
+  const deleteOquvYili = async (id) => {
+    return await oquvYiliService.delete(id);
+  };
 
   return { oquvYillari, oquvYili, loading, getAllOquvYillari, getOquvYili, createOquvYili, updateOquvYili, deleteOquvYili };
 });
