@@ -40,11 +40,11 @@
             <label for="akademik_daraja">Akademik daraja nomi</label>
             <InputText id="akademik_daraja" v-model.trim="formData.akademik_daraja" required="true" autofocus
               :invalid="submitted && !formData.akademik_daraja" />
-            <small class="p-invalid" v-if="submitted && !formData.akademik_daraja">Akademik daraja kiritish majburiy.</small>
+            <small class="p-error" v-if="submitted && !formData.akademik_daraja">Akademik daraja kiritish majburiy.</small>
           </div>
 
           <template #footer>
-            <Button label="Bekor qilish" icon="pi pi-times" text="" @click="hideDialog"severity="danger" />
+            <Button label="Bekor qilish" icon="pi pi-times" text="" @click="hideDialog" severity="secondary" />
             <Button label="Saqlash" icon="pi pi-check" text="" @click="save" />
           </template>
         </Dialog>

@@ -40,11 +40,11 @@
             <label for="fan_bloki">Fan bloki nomi</label>
             <InputText id="fan_bloki" v-model.trim="formData.fan_bloki" required="true" autofocus
               :invalid="submitted && !formData.fan_bloki" />
-            <small class="p-invalid" v-if="submitted && !formData.fan_bloki">Fan bloki kiritish majburiy.</small>
+            <small class="p-error" v-if="submitted && !formData.fan_bloki">Fan bloki kiritish majburiy.</small>
           </div>
 
           <template #footer>
-            <Button label="Bekor qilish" icon="pi pi-times" text="" @click="hideDialog" severity="danger" />
+            <Button label="Bekor qilish" icon="pi pi-times" text="" @click="hideDialog" severity="secondary" />
             <Button label="Saqlash" icon="pi pi-check" text="" @click="save" />
           </template>
         </Dialog>

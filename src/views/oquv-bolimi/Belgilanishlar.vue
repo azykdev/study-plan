@@ -41,7 +41,7 @@
             <label for="grafik_belgisi">Belgilanish nomi</label>
             <InputText id="grafik_belgisi" v-model.trim="formData.grafik_belgisi" required="true" autofocus
               :invalid="submitted && !formData.grafik_belgisi" />
-            <small class="p-invalid" v-if="submitted && !formData.grafik_belgisi">Belgilanish kiritish majburiy.</small>
+            <small class="p-error" v-if="submitted && !formData.grafik_belgisi">Belgilanish kiritish majburiy.</small>
           </div>
 
           <div class="field">
@@ -50,7 +50,7 @@
           </div>
 
           <template #footer>
-            <Button label="Bekor qilish" icon="pi pi-times" text="" @click="hideDialog" severity="danger" />
+            <Button label="Bekor qilish" icon="pi pi-times" text="" @click="hideDialog" severity="secondary" />
             <Button label="Saqlash" icon="pi pi-check" text="" @click="save" />
           </template>
         </Dialog>

@@ -40,11 +40,11 @@
             <label for="talim_shakli">Ta'lim shakli nomi</label>
             <InputText id="talim_shakli" v-model.trim="formData.talim_shakli" required="true" autofocus
               :invalid="submitted && !formData.talim_shakli" />
-            <small class="p-invalid" v-if="submitted && !formData.talim_shakli">Ta'lim shakli kiritish majburiy.</small>
+            <small class="p-error" v-if="submitted && !formData.talim_shakli">Ta'lim shakli kiritish majburiy.</small>
           </div>
 
           <template #footer>
-            <Button label="Bekor qilish" icon="pi pi-times" text="" @click="hideDialog"severity="danger" />
+            <Button label="Bekor qilish" icon="pi pi-times" text="" @click="hideDialog" severity="secondary" />
             <Button label="Saqlash" icon="pi pi-check" text="" @click="save" />
           </template>
         </Dialog>
