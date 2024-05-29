@@ -107,6 +107,11 @@
       "id": "b4fe",
       "grafik_belgisi": "a",
       "mazmuni": "wefg"
+    },
+    {
+      "id": "7447",
+      "grafik_belgisi": "K",
+      "mazmuni": "dfsdghn"
     }
   ],
   "oquv-bolimi-kafedralar": [
@@ -114,7 +119,24 @@
       "id": "1",
       "kafedra_nomi": "Tillar kafedrasi",
       "createdAt": "2021-10-15T06:52:24.000Z",
-      "updatedAt": "2021-10-15T06:52:24.000Z"
+      "updatedAt": "2021-10-15T06:52:24.000Z",
+      "belgilanishlar": [
+        {
+          "id": "b4fe",
+          "grafik_belgisi": "a",
+          "mazmuni": "wefg"
+        },
+        {
+          "id": "7447",
+          "grafik_belgisi": "K",
+          "mazmuni": "dfsdghn"
+        }
+      ]
+    },
+    {
+      "id": "6732",
+      "kafedra_nomi": "TJBAKT kafedrasi",
+      "belgilanishlar": []
     }
   ],
   "oquv-bolimi-oquv-reja": [
@@ -166,6 +188,60 @@
       "uqish_muddati": {
         "label": 4,
         "value": 4
+      },
+      "kafedra": {
+        "label": "Tillar kafedrasi",
+        "value": "1"
+      }
+    },
+    {
+      "id": "2a37",
+      "yunalish": {
+        "label": "Tjb 702-20",
+        "value": "ea27"
+      },
+      "uquv_yili": {
+        "label": "2022-2023",
+        "value": "1"
+      },
+      "talim_shakli": {
+        "label": "Kechki",
+        "value": "7a6e"
+      },
+      "akademik_daraja": {
+        "label": "Magistr",
+        "value": "0c12"
+      },
+      "uqish_muddati": {
+        "label": 2,
+        "value": 2
+      },
+      "kafedra": {
+        "label": "Tillar kafedrasi",
+        "value": "1"
+      }
+    },
+    {
+      "id": "dbb5",
+      "yunalish": {
+        "label": "IT",
+        "value": "2"
+      },
+      "uquv_yili": {
+        "label": "2021-2022",
+        "value": "2"
+      },
+      "akademik_daraja": {
+        "label": "Bakalavr",
+        "value": "1"
+      },
+      "talim_shakli": {
+        "label": "Kunduzgi",
+        "value": "1"
+      },
+      "uqish_muddati": {
+        "label": 1,
+        "value": 1
       },
       "kafedra": {
         "label": "Tillar kafedrasi",

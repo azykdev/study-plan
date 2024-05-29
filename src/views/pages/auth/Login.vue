@@ -39,7 +39,7 @@ const logoUrl = computed(() => {
                             </div>
                             <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: var(--primary-color)">Parolni unutdingizmi?</a>
                         </div>
-                        <Button label="Kirish" class="w-full p-3 text-xl" @click="$router.push({ name: 'oquv_bolimi_dashboard' })"></Button>
+                        <Button label="Kirish" class="w-full p-3 text-xl" @click="$router.push({ name: 'kafedra_mudiri_dashboard' })"></Button>
                     </div>
                 </div>
             </div>

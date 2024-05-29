@@ -1,5 +1,5 @@
 <template>
-  
+
   <div class="grid mt-0">
     <div class="cols-12 w-full">
       <div class="card w-full">
@@ -50,110 +50,60 @@
           class="p-fluid">
 
           <!-- Yo'nalishlar -->
-          <div class="field">
-            <label for="yunalish" class="mb-3">Yo'nalish</label>
-            <Dropdown id="yunalish" v-model="formData.yunalish" :options="yunalishlarOptions" optionLabel="label"
-              placeholder="Yo'nalish tanlash" :invalid="submitted && !formData.yunalish">
-              <template #value="slotProps">
-                <div v-if="slotProps.value && slotProps.value.value">
-                  <span class="product-badge">{{ slotProps.value.label }}</span>
-                </div>
-                <!-- <div v-else-if="slotProps.value && !slotProps.value.value">
-                  <span>{{ slotProps.value }}</span>
-                </div> -->
-                <span v-else>
-                  {{ slotProps.placeholder }}
-                </span>
-              </template>
+          <FloatLabel class="mt-5">
+            <Dropdown showClear inputId="yunalish" v-model="formData.yunalish" :options="yunalishlarOptions" optionLabel="label"
+              :invalid="submitted && !formData.yunalish">
+
             </Dropdown>
-            <small class="p-error" v-if="submitted && !formData.yunalish">Yo'nalish kiritish majburiy</small>
-          </div>
+            <label for="yunalish">Yo'nalish</label>
+            <!-- <small class="p-error" v-if="submitted && !formData.yunalish">Yo'nalish kiritish majburiy</small> -->
+          </FloatLabel>
 
           <!-- O'quv yili -->
-          <div class="field">
-            <label for="uquv_yili" class="mb-3">O'quv yili</label>
-            <Dropdown id="uquv_yili" v-model="formData.uquv_yili" :options="uquvYiliOptions" optionLabel="label"
-              placeholder="O'quv yili" :invalid="submitted && !formData.uquv_yili">
-              <template #value="slotProps">
-                <div v-if="slotProps.value && slotProps.value.value">
-                  <span class="product-badge">{{ slotProps.value.label }}</span>
-                </div>
-                <span v-else>
-                  {{ slotProps.placeholder }}
-                </span>
-              </template>
+          <FloatLabel class="mt-5">
+            <Dropdown showClear id="uquv_yili" v-model="formData.uquv_yili" :options="uquvYiliOptions" optionLabel="label"
+              :invalid="submitted && !formData.uquv_yili">
             </Dropdown>
-            <small class="p-error" v-if="submitted && !formData.uquv_yili">O'quv yili kiritish majburiy</small>
-          </div>
+            <label for="uquv_yili">O'quv yili</label>
+            <!-- <small class="p-error" v-if="submitted && !formData.uquv_yili">O'quv yili kiritish majburiy</small> -->
+          </FloatLabel>
 
           <!-- Ta'lim shakli -->
-          <div class="field">
-            <label for="talim_shakli" class="mb-3">Ta'lim shakli</label>
-            <Dropdown id="talim_shakli" v-model="formData.talim_shakli" :options="talimShakliOptions"
-              optionLabel="label" placeholder="Ta'lim shakli" :invalid="submitted && !formData.talim_shakli">
-              <template #value="slotProps">
-                <div v-if="slotProps.value && slotProps.value.value">
-                  <span class="product-badge">{{ slotProps.value.label }}</span>
-                </div>
-                <span v-else>
-                  {{ slotProps.placeholder }}
-                </span>
-              </template>
+          <FloatLabel class="mt-5">
+            <Dropdown showClear id="talim_shakli" v-model="formData.talim_shakli" :options="talimShakliOptions"
+              optionLabel="label" :invalid="submitted && !formData.talim_shakli">
             </Dropdown>
-            <small class="p-error" v-if="submitted && !formData.talim_shakli">Ta'lim shakli kiritish majburiy</small>
-          </div>
+            <label for="talim_shakli">Ta'lim shakli</label>
+            <!-- <small class="p-error" v-if="submitted && !formData.talim_shakli">Ta'lim shakli kiritish majburiy</small> -->
+          </FloatLabel>
 
           <!-- Akademik daraja -->
-          <div class="field">
-            <label for="akademik_daraja" class="mb-3">Akademik daraja</label>
-            <Dropdown id="akademik_daraja" v-model="formData.akademik_daraja" :options="akademikDarajaOptions"
-              optionLabel="label" placeholder="Akademik daraja" :invalid="submitted && !formData.akademik_daraja">
-              <template #value="slotProps">
-                <div v-if="slotProps.value && slotProps.value.value">
-                  <span class="product-badge">{{ slotProps.value.label }}</span>
-                </div>
-                <span v-else>
-                  {{ slotProps.placeholder }}
-                </span>
-              </template>
+          <FloatLabel class="mt-5">
+            <Dropdown showClear id="akademik_daraja" v-model="formData.akademik_daraja" :options="akademikDarajaOptions"
+              optionLabel="label" :invalid="submitted && !formData.akademik_daraja">
             </Dropdown>
-            <small class="p-error" v-if="submitted && !formData.akademik_daraja">Akademik daraja kiritish
-              majburiy</small>
-          </div>
+            <label for="akademik_daraja">Akademik daraja</label>
+            <!-- <small class="p-error" v-if="submitted && !formData.akademik_daraja">Akademik daraja kiritish
+              majburiy</small> -->
+          </FloatLabel>
 
           <!-- O'qish muddati -->
-          <div class="field">
-            <label for="uqish_muddati" class="mb-3">O'qish muddati</label>
-            <Dropdown id="uqish_muddati" v-model="formData.uqish_muddati" :options="uqishMuddatiOptions"
-              optionLabel="label" placeholder="O'qish muddati" :invalid="submitted && !formData.uqish_muddati">
-              <template #value="slotProps">
-                <div v-if="slotProps.value && slotProps.value.value">
-                  <span class="product-badge">{{ slotProps.value.label }}</span>
-                </div>
-                <span v-else>
-                  {{ slotProps.placeholder }}
-                </span>
-              </template>
+          <FloatLabel class="mt-5">
+            <Dropdown showClear id="uqish_muddati" v-model="formData.uqish_muddati" :options="uqishMuddatiOptions"
+              optionLabel="label" :invalid="submitted && !formData.uqish_muddati">
             </Dropdown>
-            <small class="p-error" v-if="submitted && !formData.uqish_muddati">O'qish muddati kiritish majburiy</small>
-          </div>
+            <label for="uqish_muddati">O'qish muddati</label>
+            <!-- <small class="p-error" v-if="submitted && !formData.uqish_muddati">O'qish muddati kiritish majburiy</small> -->
+          </FloatLabel>
 
           <!-- Kafedra -->
-          <div class="field">
-            <label for="kafedra" class="mb-3">Kafedra</label>
-            <Dropdown id="kafedra" v-model="formData.kafedra" :options="kafedraOptions" optionLabel="label"
-              placeholder="Kafedra" :invalid="submitted && !formData.kafedra">
-              <template #value="slotProps">
-                <div v-if="slotProps.value && slotProps.value.value">
-                  <span class="product-badge">{{ slotProps.value.label }}</span>
-                </div>
-                <span v-else>
-                  {{ slotProps.placeholder }}
-                </span>
-              </template>
+          <FloatLabel class="mt-5">
+            <!-- <small class="p-invalid" v-if="submitted && !formData.kafedra">Kafedra kiritish majburiy</small> -->
+            <Dropdown showClear id="kafedra" v-model="formData.kafedra" :options="kafedraOptions" optionLabel="label"
+              :invalid="submitted && !formData.kafedra">
             </Dropdown>
-            <small class="p-error" v-if="submitted && !formData.kafedra">Kafedra kiritish majburiy</small>
-          </div>
+            <label for="kafedra">Kafedra</label>
+          </FloatLabel>
 
           <template #footer>
             <Button label="Bekor qilish" icon="pi pi-times" text="" @click="hideDialog" severity="secondary" />
@@ -165,7 +115,8 @@
         <Dialog v-model:visible="deleteDialog" :style="{ width: '450px' }" header="Tasdiqlash" :modal="true">
           <div class="flex align-items-center justify-content-center">
             <i class="pi pi-exclamation-triangle mr-3" style="font-size: 2rem" />
-            <span v-if="formData">Haqiqatan ham <b>{{ formData.yunalish.label }}</b> ni oʻchirib tashlamoqchimisiz ?</span>
+            <span v-if="formData">Haqiqatan ham <b>{{ formData.yunalish.label }}</b> ni oʻchirib tashlamoqchimisiz
+              ?</span>
           </div>
           <template #footer>
             <Button label="Yo'q" icon="pi pi-times" text @click="deleteDialog = false" severity="danger" />
@@ -282,7 +233,7 @@ const hideDialog = () => {
 const save = () => {
   submitted.value = true;
 
-  if (formData.value.yunalish) {
+  if (formData.value.yunalish && formData.value.uquv_yili && formData.value.talim_shakli && formData.value.akademik_daraja && formData.value.kafedra && formData.value.uqish_muddati) {
     if (formData.value.id) {
       OBOquvRejaStore.updateOquvReja(formData.value).then(res => {
         console.log(res);
